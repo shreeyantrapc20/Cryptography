@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<string.h>
 void encrypt(char text[], int shift){
 	for(int i=0; i<strlen(text);i++){
 		if(text[i]>='a'&& text[i]<='z'){
 			text[i]='a'+(text[i]-'a'+shift)%26;
 		}
-		else if{
+		else{
 				text[i]='A'+(text[i]-'A'+shift)%26;
 		}
 	}
@@ -17,6 +18,6 @@ int main(){
 	printf("Enter shift value: \n");
 	scanf("%d",&shift);
 	encrypt(plaintext,shift);
-	printf("Encrypted text :- \n"plaintext);
+	printf("Encrypted text :- %s \n",plaintext);
 	return 0;
 }
